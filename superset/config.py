@@ -115,12 +115,12 @@ ENABLE_PROXY_FIX = False
 APP_NAME = 'Superset'
 
 # Uncomment to setup an App icon
-APP_ICON = '/static/assets/images/tgr-slogan-right.svg'
+APP_ICON = '/static/assets/images/superset-logo@2x.png'
 APP_ICON_WIDTH = 126
 
 # Uncomment to specify where clicking the logo would take the user
 # e.g. setting it to '/welcome' would take the user to '/superset/welcome'
-LOGO_TARGET_PATH = '/dashboard/Informes/'
+LOGO_TARGET_PATH = None
 
 # Druid query timezone
 # tz.tzutc() : Using utc timezone
@@ -147,7 +147,7 @@ AUTH_TYPE = AUTH_DB
 # AUTH_ROLE_ADMIN = 'Admin'
 
 # Uncomment to setup Public role name, no authentication needed
-AUTH_ROLE_PUBLIC = 'Public'
+# AUTH_ROLE_PUBLIC = 'Public'
 
 # Will allow user self registration
 # AUTH_USER_REGISTRATION = True
@@ -171,7 +171,7 @@ AUTH_ROLE_PUBLIC = 'Public'
 # Grant public role the same set of permissions as for the GAMMA role.
 # This is useful if one wants to enable anonymous users to view
 # dashboards. Explicit grant on specific datasets is still required.
-PUBLIC_ROLE_LIKE_GAMMA = True
+PUBLIC_ROLE_LIKE_GAMMA = False
 
 # ---------------------------------------------------
 # Babel config for translations
