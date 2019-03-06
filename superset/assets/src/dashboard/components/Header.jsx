@@ -249,16 +249,8 @@ class Header extends React.PureComponent {
             onSaveTitle={this.handleChangeText}
             showTooltip={false}
           />
-          <span className="favstar">
-            <FaveStar
-              itemId={dashboardInfo.id}
-              fetchFaveStar={this.props.fetchFaveStar}
-              saveFaveStar={this.props.saveFaveStar}
-              isStarred={this.props.isStarred}
-            />
-          </span>
         </div>
-
+        {userCanSaveAs && (
         <div className="button-container">
           {userCanSaveAs && (
             <div className="button-container">
@@ -354,6 +346,7 @@ class Header extends React.PureComponent {
             isLoading={isLoading}
           />
         </div>
+        )}
       </div>
     );
   }
