@@ -116,7 +116,7 @@ APP_NAME = 'Estadísticas TGR'
 
 # Uncomment to setup an App icon
 APP_ICON = '/static/assets/images/tgr-slogan-right.svg'
-APP_ICON_WIDTH = 126
+APP_ICON_WIDTH = 75
 
 # Uncomment to specify where clicking the logo would take the user
 # e.g. setting it to '/welcome' would take the user to '/superset/welcome'
