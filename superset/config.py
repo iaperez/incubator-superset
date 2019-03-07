@@ -112,7 +112,7 @@ ENABLE_PROXY_FIX = False
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-APP_NAME = 'Superset'
+APP_NAME = 'Estadísticas TGR'
 
 # Uncomment to setup an App icon
 APP_ICON = '/static/assets/images/tgr-slogan-right.svg'
@@ -120,7 +120,7 @@ APP_ICON_WIDTH = 126
 
 # Uncomment to specify where clicking the logo would take the user
 # e.g. setting it to '/welcome' would take the user to '/superset/welcome'
-LOGO_TARGET_PATH = '/dashboard/Informes/'
+LOGO_TARGET_PATH = '/../dashboard/list/'
 
 # Druid query timezone
 # tz.tzutc() : Using utc timezone
