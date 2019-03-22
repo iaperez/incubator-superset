@@ -11,15 +11,15 @@ phases:
       - echo Build started on `date`
       - ls -la
       - echo Building the Docker image...
-      - docker build -f contrib/docker/Dockerfile -t superset:superset .
-      - docker tag superset:superset $BUILD_REPOSITORY_URL/$BUILD_REPOSITORY_NAME:latest
+      - docker build -f contrib/docker/Dockerfile -t $BUILD_REPOSITORY_NAME .
+      - docker tag $BUILD_REPOSITORY_NAME $BUILD_REPOSITORY_URL/$BUILD_REPOSITORY_NAME:$BUILD_IMAGE_TAG
       - docker ps
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push $BUILD_REPOSITORY_URL/$BUILD_REPOSITORY_NAME:latest
+      - docker push $BUILD_REPOSITORY_URL/$BUILD_REPOSITORY_NAME:$BUILD_IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"treasuryreport","imageUri":"%s"}]' $BUILD_REPOSITORY_URL/$BUILD_REPOSITORY_NAME:latest > imagedefinitions.json
+      - printf '[{"name":"treasuryreport","imageUri":"%s"}]' $BUILD_REPOSITORY_URL/$BUILD_REPOSITORY_NAME:$BUILD_IMAGE_TAG > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
