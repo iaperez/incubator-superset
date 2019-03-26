@@ -10,6 +10,9 @@ phases:
     commands:
       - echo Build started on `date`
       - ls -la
+      - echo fixing symbolic link...
+      - rm superset/static/assets
+      - ln -s ../assets/ superset/static/assets
       - echo Building the Docker image...
       - docker build -f contrib/docker/Dockerfile -t $BUILD_REPOSITORY_NAME .
       - docker tag $BUILD_REPOSITORY_NAME $BUILD_REPOSITORY_URL/$BUILD_REPOSITORY_NAME:$BUILD_IMAGE_TAG
